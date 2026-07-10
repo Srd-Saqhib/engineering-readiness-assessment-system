@@ -1,0 +1,588 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 50%, #0a0a0a 100%);
+    background-attachment: fixed;
+    color: #f5f5f5;
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+    padding-top: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Main Page Container */
+.main-content {
+    padding: 0 20px;
+}
+
+/* Heading */
+.mark {
+    text-align: center;
+    margin: 60px 0 20px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.mark::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    margin: 20px auto 0;
+}
+
+/* Buttons - Primary Action */
+.btn {
+    display: block;
+    margin: 40px auto 60px;
+    padding: 18px 60px;
+    border: 2px solid #D4AF37;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    letter-spacing: 0.6px;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: inherit;
+    animation: slideInUp 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #f4c430 0%, #ffeb3b 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 18px 48px rgba(212, 175, 55, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    border-color: #ffeb3b;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25), 0 12px 32px rgba(212, 175, 55, 0.35);
+}
+
+.btn:active {
+    transform: translateY(-2px);
+}
+
+/* Analyze Another Profile Button */
+.analyse-btn {
+    display: block;
+    margin: 50px auto 80px;
+    padding: 18px 60px;
+    border: 2px solid #D4AF37;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    letter-spacing: 0.6px;
+    box-shadow: 0 12px 32px rgba(212, 175, 55, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: inherit;
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.320, 1) 0.3s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.analyse-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+}
+
+.analyse-btn:hover {
+    background: linear-gradient(135deg, #f4c430 0%, #ffeb3b 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 18px 48px rgba(212, 175, 55, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    border-color: #ffeb3b;
+}
+
+.analyse-btn:hover::before {
+    left: 100%;
+}
+
+.analyse-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25), 0 12px 32px rgba(212, 175, 55, 0.35);
+}
+
+.analyse-btn:active {
+    transform: translateY(-2px);
+}
+
+/* Modal Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 999;
+    animation: overlayFadeIn 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(16px);
+    }
+}
+
+/* Prediction Form Modal */
+.prediction-form {
+    width: 100%;
+      max-width:760px;
+    padding:28px 32px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #181818 0%, #242424 100%);
+    border: 2px solid #D4AF37;
+    border-radius: 20px;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(212, 175, 55, 0.15);
+    animation: modalSlideIn 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    position: relative;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.prediction-form h2 {
+    margin-bottom:20px;
+    font-size:1.8rem;
+    text-align: center;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Form Grid Layout */
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+    margin-bottom:20px;
+}
+
+/* Form Field Container */
+.prediction-form div.field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Full-width fields */
+.form-grid .field:last-child{
+    grid-column:1 / -1;
+} 
+
+/* Form Labels */
+.prediction-form label {
+    color: #D4AF37;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1.2;
+}
+
+/* Form Inputs */
+.prediction-form input {
+    height: 42px;
+    padding: 0 15px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #242424 100%);
+    color: white;
+    border: 2px solid #303030;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(212, 175, 55, 0);
+    font-family: inherit;
+}
+
+.prediction-form input::placeholder {
+    color: #666;
+    font-weight: 400;
+}
+
+.prediction-form input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background: linear-gradient(135deg, #303030 0%, #2a2a2a 100%);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+.prediction-form input:hover:not(:focus) {
+    border-color: #404040;
+    background: linear-gradient(135deg, #2d2d2d 0%, #252525 100%);
+}
+
+/* Remove spinner arrows */
+.prediction-form input::-webkit-outer-spin-button,
+.prediction-form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.prediction-form input[type="number"] {
+    appearance: textfield;
+}
+
+/* Form Submit Button */
+.prediction-form button {
+    width: 100%;
+    height: 46px;
+    margin-top: 20px;
+    border: 2px solid #D4AF37;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    color: #111;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    letter-spacing: 0.6px;
+    box-shadow:0 10px 24px rgba(212,175,55,.25);
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.prediction-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 1;
+}
+
+.prediction-form button:hover {
+    background: linear-gradient(135deg, #f4c430 0%, #ffeb3b 100%);
+    transform: translateY(-4px);
+    box-shadow:0 10px 24px rgba(212,175,55,.25);
+    border-color: #ffeb3b;
+}
+
+.prediction-form button:hover::before {
+    left: 100%;
+}
+
+.prediction-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25), 0 12px 32px rgba(212, 175, 55, 0.35);
+}
+
+.prediction-form button:active {
+    transform: translateY(-1px);
+}
+
+/* Custom Scrollbar */
+.prediction-form::-webkit-scrollbar {
+    width: 12px;
+}
+
+.prediction-form::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.5);
+    border-radius: 20px;
+}
+
+.prediction-form::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #D4AF37 0%, #f4c430 100%);
+    border-radius: 20px;
+    border: 3px solid #1a1a1a;
+    transition: all 0.3s;
+}
+
+.prediction-form::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #f4c430 0%, #ffeb3b 100%);
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.field input{
+    width:100%;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ==================================== */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+    .mark {
+        font-size: 3rem;
+        margin: 50px 0 35px;
+    }
+
+    .mark::after {
+        width: 120px;
+    }
+
+    .btn,
+    .analyse-btn {
+        padding: 16px 50px;
+        font-size: 15px;
+        margin: 30px auto 50px;
+    }
+
+    .prediction-form {
+        max-width: 95%;
+        padding: 40px;
+    }
+
+    .form-grid {
+        gap: 24px;
+    }
+}
+
+/* Small Tablet (900px and below) */
+@media (max-width: 900px) {
+    .mark {
+        font-size: 2.8rem;
+        margin: 45px 0 30px;
+    }
+
+    .mark::after {
+        width: 110px;
+        height: 3px;
+    }
+
+    .btn,
+    .analyse-btn {
+        padding: 16px 45px;
+        font-size: 15px;
+        margin: 28px auto 45px;
+    }
+
+    .prediction-form {
+        max-width: 90%;
+        padding: 38px;
+    }
+
+    .prediction-form h2 {
+        font-size: 2rem;
+        margin-bottom: 32px;
+    }
+
+    .form-grid {
+        gap: 22px;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .mark {
+        font-size: 2.5rem;
+        margin: 40px 0 28px;
+    }
+
+    .mark::after {
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .btn,
+    .analyse-btn {
+        padding: 15px 40px;
+        font-size: 14px;
+        margin: 25px auto 40px;
+    }
+
+    .overlay {
+        padding: 15px;
+    }
+
+    .prediction-form {
+        max-width: 100%;
+        padding: 32px;
+        border-radius: 18px;
+    }
+
+    .prediction-form h2 {
+        font-size: 1.8rem;
+        margin-bottom: 28px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .form-grid .field:nth-child(n+7) {
+        grid-column: auto;
+    }
+
+    .prediction-form label {
+        font-size: 11px;
+        font-weight: 800;
+    }
+
+    .prediction-form input {
+        height: 46px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .prediction-form button {
+        height: 50px;
+        font-size: 14px;
+        margin-top: 24px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .mark {
+        font-size: 2.2rem;
+        margin: 35px 0 24px;
+    }
+
+    .mark::after {
+        width: 80px;
+        height: 2px;
+        margin-top: 15px;
+    }
+
+    .btn,
+    .analyse-btn {
+        padding: 14px 32px;
+        font-size: 13px;
+        margin: 22px auto 35px;
+    }
+
+    .overlay {
+        padding: 12px;
+    }
+
+    .prediction-form {
+        padding: 28px;
+        border-radius: 16px;
+    }
+
+    .prediction-form h2 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+        letter-spacing: 0.5px;
+    }
+
+    .form-grid {
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .prediction-form label {
+        font-size: 10px;
+        letter-spacing: 0.6px;
+    }
+
+    .prediction-form input {
+        height: 44px;
+        font-size: 13px;
+        padding: 0 14px;
+        border-radius: 10px;
+    }
+
+    .prediction-form button {
+        height: 48px;
+        font-size: 13px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+}

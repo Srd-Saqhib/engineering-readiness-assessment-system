@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# ML Models (optional if large)
+*.pkl
+*.joblib
+
+# Node
+node_modules/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,94 @@
+{
+    "Machine Learning Engineer": {
+        "overview": "Machine Learning Engineers build intelligent systems using data, algorithms, and AI models to solve real-world problems.",
+        "required_skills": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Statistics",
+            "Machine Learning",
+            "Scikit-learn",
+            "TensorFlow",
+            "Git"
+        ],
+        "roadmap": [
+            "Learn Python",
+            "Master NumPy",
+            "Learn Pandas",
+            "Study Statistics",
+            "Learn Machine Learning",
+            "Build ML Projects",
+            "Learn Deep Learning",
+            "Deploy Models",
+            "Prepare for Interviews"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Machine Learning Roadmap - CampusX",
+                "url": "https://youtube.com/..."
+            },
+            {
+                "title": "Krish Naik Machine Learning Playlist",
+                "url": "https://youtube.com/..."
+            },
+            {
+                "title": "StatQuest Machine Learning",
+                "url": "https://youtube.com/..."
+            }
+        ],
+        "courses": [
+            {
+                "name": "Machine Learning Specialization",
+                "provider": "Coursera",
+                "level": "Intermediate",
+                "url": "..."
+            },
+            {
+                "name": "Machine Learning with Python",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "..."
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "Kaggle",
+                "url": "https://kaggle.com"
+            },
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://hackerrank.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Movie Recommendation System"
+            },
+            {
+                "level": "Intermediate",
+                "title": "House Price Prediction"
+            },
+            {
+                "level": "Advanced",
+                "title": "Plant Disease Detection"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM"
+        ],
+        "salary": {
+            "fresher": "₹6–12 LPA",
+            "experienced": "₹15–30 LPA"
+        }
+    }
+}
