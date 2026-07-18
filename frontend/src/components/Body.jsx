@@ -32,6 +32,8 @@ const FORM_FIELDS = [
     { id: "self_learning_hours", label: "Self Learning Hours (per week)", min: "0", full: true },
 ];
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Body() {
     const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState(EMPTY_FORM);
@@ -50,7 +52,7 @@ function Body() {
     async function fetchPrediction(e) {
         e.preventDefault();
         try {
-            const res = await axios.post("http://127.0.0.1:5000/predict", formData);
+            const res = await axios.post(`${API_URL}/predict`, formData);
             setFormData(EMPTY_FORM);
             setResult(res.data);
             setShowForm(false);
@@ -63,7 +65,7 @@ function Body() {
     async function handleRoleClick(roleName) {
         try {
             const res = await axios.get(
-                `http://localhost:5000/role/${encodeURIComponent(roleName)}`
+                `${API_URL}/role/${encodeURIComponent(roleName)}`
             );
 
             setRoleDetails(res.data);

@@ -56,7 +56,7 @@ def prediction():
         level = "Good"
     elif predicted >= 40:
         level = "Average"
-    else:
+    else:   
         level = "Needs Improvement"    
 
     return jsonify({ "engineering_score":predicted, "roles":roles, "suggestions":suggestions, "level":level })
@@ -73,5 +73,5 @@ def get_role_details(role_name):
     return jsonify({"error": "Role not found"}), 404
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
