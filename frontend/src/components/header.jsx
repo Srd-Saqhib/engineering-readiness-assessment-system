@@ -1,25 +1,27 @@
-import EngineeringIcon from "@mui/icons-material/Engineering";
+import { motion } from "framer-motion";
 import "../styles/header.css";
 
 function Header() {
     return (
-        <header className="header">
+        <motion.header
+            className="header"
+            initial={{ y: -24, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+            <div className="header-inner">
+                <div className="header-brand">
+                    <span className="brand-mark" aria-hidden="true">
+                        <span className="brand-dot" />
+                    </span>
+                    <span className="header-title">
+                        Engineering Readiness Analyzer
+                    </span>
+                </div>
 
-            <div className="logo">
-                <EngineeringIcon
-                    sx={{
-                        fontSize: 34,
-                        color: "#111"
-                    }}
-                />
+                <span className="header-tag">v2 · AI Career Insight</span>
             </div>
-
-            <div className="title">
-                <h1>Engineering Readiness Analyzer</h1>
-                <p>ML Based Career Assessment Platform</p>
-            </div>
-
-        </header>
+        </motion.header>
     );
 }
 

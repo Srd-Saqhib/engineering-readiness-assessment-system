@@ -1,35 +1,64 @@
 import "../styles/resultCard.css";
+import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
+
+const LEVEL_COLORS = {
+    Excellent: "var(--level-excellent)",
+    Good: "var(--level-good)",
+    Average: "var(--level-average)",
+};
 
 function ResultCard({ score, level, roles, suggestions, onRoleClick }) {
-    let color = "";
+    const color = LEVEL_COLORS[level] || "var(--level-low)";
 
-    if (level === "Excellent")
-        color = "#22c55e";
-    else if (level === "Good")
-        color = "#3b82f6";
-    else if (level === "Average")
-        color = "#f59e0b";
-    else
-        color = "#ef4444";
+    const radius = 84;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (Math.min(Math.max(score, 0), 100) / 100) * circumference;
 
     return (
-        <div className="result-card">
-            <h2>Assessment Results</h2>
+        <motion.div
+            className="result-card"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+        >
+            <span className="result-eyebrow">Assessment Complete</span>
+            <h2>Engineering Readiness Report</h2>
 
             {/* Score Section - Left Side */}
             <div className="result-score-section">
-                <div
-                    className="score-circle"
-                    style={{ borderColor: color }}
-                >
-                    {score.toFixed(1)}
+                <div className="score-gauge">
+                    <svg viewBox="0 0 200 200" className="score-svg">
+                        <circle
+                            cx="100"
+                            cy="100"
+                            r={radius}
+                            className="score-track"
+                        />
+                        <circle
+                            cx="100"
+                            cy="100"
+                            r={radius}
+                            className="score-progress"
+                            style={{
+                                stroke: color,
+                                strokeDasharray: circumference,
+                                strokeDashoffset: offset,
+                            }}
+                        />
+                    </svg>
+                    <div className="score-gauge-label">
+                        <span className="score-number">{score.toFixed(1)}</span>
+                        <span className="score-max">/ 100</span>
+                    </div>
                 </div>
 
                 <div className="score-info">
-                    <h3 style={{ color }}>
+                    <span className="score-level" style={{ color }}>
                         {level}
-                    </h3>
+                    </span>
                     <p>Overall Engineering Readiness</p>
+
                     <div className="progress-bar">
                         <div
                             className="progress"
@@ -39,7 +68,6 @@ function ResultCard({ score, level, roles, suggestions, onRoleClick }) {
                             }}
                         ></div>
                     </div>
-                    <p className="score-display">{score.toFixed(1)} / 100</p>
                 </div>
             </div>
 
@@ -49,10 +77,24 @@ function ResultCard({ score, level, roles, suggestions, onRoleClick }) {
                     <h3>Recommended Roles</h3>
                     <ul>
                         {roles.map((role) => (
-                            <li className="role-item" key={role.role} onClick={() => onRoleClick(role.role)}>
-                                <span>{role.role}</span>
-                                <strong>{role.match}% Match</strong>
-                            </li>
+                            <motion.li
+                                className="role-item"
+                                key={role.role}
+                                onClick={() => onRoleClick(role.role)}
+                                whileHover={{ x: 6 }}
+                            >
+                                <div className="role-item-main">
+                                    <span className="role-item-name">{role.role}</span>
+                                    <div className="role-match-bar">
+                                        <div
+                                            className="role-match-fill"
+                                            style={{ width: `${role.match}%` }}
+                                        />
+                                    </div>
+                                </div>
+                                <span className="role-match-value">{role.match}%</span>
+                                <FaArrowRight className="role-item-arrow" />
+                            </motion.li>
                         ))}
                     </ul>
                 </div>
@@ -68,7 +110,7 @@ function ResultCard({ score, level, roles, suggestions, onRoleClick }) {
                     </ul>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

@@ -1,6 +1,15 @@
 import "../styles/roleDetails.css";
+import { FaTools, FaRoute, FaYoutube, FaBookOpen, FaCode, FaProjectDiagram, FaBuilding, FaMoneyBillWave, FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-function RoleDetails({ role }) {
+const sectionMotion = {
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.2 },
+    transition: { duration: 0.45, ease: "easeOut" },
+};
+
+function RoleDetails({ role, onBack }) {
     if (role?.error) {
         return (
             <div className="role-details">
@@ -11,17 +20,31 @@ function RoleDetails({ role }) {
     }
 
     return (
-        <div id="role-details" className="role-details">
+        <motion.div
+            className="role-details"
+            id="role-details"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+        >
+            <button
+                className="back-button"
+                onClick={onBack}
+            >
+                <FaArrowLeft /> View Other Recommended Roles
+            </button>
 
             <div className="role-header">
+                <span className="role-eyebrow">Career Path</span>
                 <h2>{role.role_name}</h2>
                 <p className="role-description">
                     {role.overview}
                 </p>
             </div>
 
-            <div className="role-section">
-                <h3>Required Skills</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaTools /> Required Skills</h3>
 
                 <div className="skills-container">
                     {role.required_skills.map((skill, index) => (
@@ -30,22 +53,23 @@ function RoleDetails({ role }) {
                         </span>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Learning Roadmap</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaRoute /> Learning Roadmap</h3>
 
                 <ol className="roadmap-list">
                     {role.roadmap.map((step, index) => (
                         <li key={index}>
-                            {step}
+                            <span className="roadmap-marker">{index + 1}</span>
+                            <span className="roadmap-text">{step}</span>
                         </li>
                     ))}
                 </ol>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Recommended Videos</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaYoutube color="var(--accent)" /> Recommended Videos</h3>
 
                 <div className="video-grid">
                     {role.youtube_videos.map((video, index) => (
@@ -57,14 +81,14 @@ function RoleDetails({ role }) {
                             className="video-card"
                         >
                             <h4>{video.title}</h4>
-                            <p>Watch on YouTube →</p>
+                            <p>Watch on YouTube <FaExternalLinkAlt /></p>
                         </a>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Recommended Courses</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaBookOpen /> Recommended Courses</h3>
 
                 <div className="course-grid">
                     {role.courses.map((course, index) => (
@@ -85,10 +109,10 @@ function RoleDetails({ role }) {
                         </a>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Practice Platforms</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaCode /> Practice Platforms</h3>
 
                 <div className="platform-grid">
                     {role.practice_platforms.map((platform, index) => (
@@ -100,14 +124,14 @@ function RoleDetails({ role }) {
                             className="platform-card"
                         >
                             <h4>{platform.name}</h4>
-                            <p>Start Practicing →</p>
+                            <p>Start Practicing <FaExternalLinkAlt /></p>
                         </a>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Project Ideas</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaProjectDiagram /> Project Ideas</h3>
 
                 <div className="project-grid">
                     {role.project_ideas.map((project, index) => (
@@ -122,10 +146,10 @@ function RoleDetails({ role }) {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Top Hiring Companies</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaBuilding /> Top Hiring Companies</h3>
 
                 <div className="company-grid">
                     {role.companies.map((company, index) => (
@@ -134,27 +158,27 @@ function RoleDetails({ role }) {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="role-section">
-                <h3>Salary Insights</h3>
+            <motion.div className="role-section" {...sectionMotion}>
+                <h3><FaMoneyBillWave /> Salary Insights</h3>
 
                 <div className="salary-grid">
 
                     <div className="salary-card">
-                        <h4>Fresher</h4>
+                        <span className="salary-tag">Fresher</span>
                         <p>{role.salary.fresher}</p>
                     </div>
 
                     <div className="salary-card">
-                        <h4>Experienced</h4>
+                        <span className="salary-tag">Experienced</span>
                         <p>{role.salary.experienced}</p>
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
 
-        </div>
+        </motion.div>
     );
 }
 

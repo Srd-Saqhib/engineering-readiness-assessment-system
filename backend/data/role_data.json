@@ -1,39 +1,54 @@
 {
     "Machine Learning Engineer": {
-        "overview": "Machine Learning Engineers build intelligent systems using data, algorithms, and AI models to solve real-world problems.",
+        "overview": "Machine Learning Engineers design, train and deploy predictive models using data, statistics and AI techniques for real-world applications.",
         "required_skills": [
             "Python",
             "NumPy",
             "Pandas",
             "Statistics",
-            "Machine Learning",
+            "Linear Algebra",
             "Scikit-learn",
             "TensorFlow",
-            "Git"
+            "PyTorch",
+            "SQL",
+            "Git",
+            "Docker",
+            "Flask/FastAPI"
         ],
         "roadmap": [
             "Learn Python",
-            "Master NumPy",
-            "Learn Pandas",
+            "Master NumPy & Pandas",
             "Study Statistics",
-            "Learn Machine Learning",
-            "Build ML Projects",
-            "Learn Deep Learning",
+            "Learn SQL",
+            "Understand Machine Learning",
+            "Practice Scikit-learn",
+            "Study Deep Learning",
+            "Learn TensorFlow/PyTorch",
+            "Build End-to-End Projects",
             "Deploy Models",
+            "Learn MLOps Basics",
             "Prepare for Interviews"
         ],
         "youtube_videos": [
             {
-                "title": "Machine Learning Roadmap - CampusX",
-                "url": "https://youtube.com/..."
+                "title": "CampusX ML Roadmap",
+                "url": "https://www.youtube.com/results?search_query=CampusX+Machine+Learning+Roadmap"
             },
             {
-                "title": "Krish Naik Machine Learning Playlist",
-                "url": "https://youtube.com/..."
+                "title": "Krish Naik ML Playlist",
+                "url": "https://www.youtube.com/results?search_query=Krish+Naik+Machine+Learning+Playlist"
             },
             {
                 "title": "StatQuest Machine Learning",
-                "url": "https://youtube.com/..."
+                "url": "https://www.youtube.com/results?search_query=StatQuest+Machine+Learning"
+            },
+            {
+                "title": "freeCodeCamp ML",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Machine+Learning"
+            },
+            {
+                "title": "Andrew Ng ML",
+                "url": "https://www.youtube.com/results?search_query=Andrew+Ng+Machine+Learning"
             }
         ],
         "courses": [
@@ -41,27 +56,43 @@
                 "name": "Machine Learning Specialization",
                 "provider": "Coursera",
                 "level": "Intermediate",
-                "url": "..."
+                "url": "https://www.coursera.org/specializations/machine-learning-introduction"
             },
             {
                 "name": "Machine Learning with Python",
                 "provider": "freeCodeCamp",
                 "level": "Beginner",
-                "url": "..."
+                "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/"
+            },
+            {
+                "name": "ML Crash Course",
+                "provider": "Google",
+                "level": "Beginner",
+                "url": "https://developers.google.com/machine-learning/crash-course"
+            },
+            {
+                "name": "Deep Learning Specialization",
+                "provider": "Coursera",
+                "level": "Advanced",
+                "url": "https://www.coursera.org/specializations/deep-learning"
             }
         ],
         "practice_platforms": [
-            {
-                "name": "Kaggle",
-                "url": "https://kaggle.com"
-            },
             {
                 "name": "LeetCode",
                 "url": "https://leetcode.com"
             },
             {
                 "name": "HackerRank",
-                "url": "https://hackerrank.com"
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
             }
         ],
         "project_ideas": [
@@ -75,7 +106,7 @@
             },
             {
                 "level": "Advanced",
-                "title": "Plant Disease Detection"
+                "title": "Plant Disease Detection using CNN"
             }
         ],
         "companies": [
@@ -84,11 +115,1220 @@
             "Amazon",
             "Adobe",
             "NVIDIA",
-            "IBM"
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
         ],
         "salary": {
             "fresher": "₹6–12 LPA",
-            "experienced": "₹15–30 LPA"
+            "experienced": "₹15–35 LPA"
+        }
+    },
+    "AI Engineer": {
+        "overview": "Develop intelligent AI systems using ML, NLP and Computer Vision.",
+        "required_skills": [
+            "Python",
+            "ML",
+            "Deep Learning",
+            "TensorFlow",
+            "PyTorch",
+            "NLP",
+            "Computer Vision",
+            "LLMs",
+            "Git",
+            "Docker"
+        ],
+        "roadmap": [
+            "Python",
+            "Math",
+            "ML",
+            "Deep Learning",
+            "NLP",
+            "Computer Vision",
+            "LLMs",
+            "Deploy AI",
+            "Projects",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "AI Engineer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=AI+Roadmap"
+            },
+            {
+                "title": "AI Engineer Playlist",
+                "url": "https://www.youtube.com/results?search_query=AI+Playlist"
+            },
+            {
+                "title": "CodeWithHarry AI",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+AI"
+            },
+            {
+                "title": "freeCodeCamp AI",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+AI"
+            },
+            {
+                "title": "Chai aur Code AI",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+AI"
+            }
+        ],
+        "courses": [
+            {
+                "name": "AI Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "AI Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "AI Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "AI Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic AI Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "AI Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade AI Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Data Scientist": {
+        "overview": "Extract insights from data using analytics and machine learning.",
+        "required_skills": [
+            "Python",
+            "SQL",
+            "Pandas",
+            "NumPy",
+            "Statistics",
+            "Power BI",
+            "Tableau",
+            "Scikit-learn",
+            "Visualization"
+        ],
+        "roadmap": [
+            "Python",
+            "SQL",
+            "EDA",
+            "Statistics",
+            "Visualization",
+            "ML",
+            "Projects",
+            "Deployment",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Data Scientist Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Data+Science+Roadmap"
+            },
+            {
+                "title": "Data Scientist Playlist",
+                "url": "https://www.youtube.com/results?search_query=Data+Science+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Data Science",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Data+Science"
+            },
+            {
+                "title": "freeCodeCamp Data Science",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Data+Science"
+            },
+            {
+                "title": "Chai aur Code Data Science",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Data+Science"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Data Science Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Data Science Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Data Science Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Data Science Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Data Science Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Data Science Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Data Science Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Backend Developer": {
+        "overview": "Develop scalable server-side applications and APIs.",
+        "required_skills": [
+            "Python",
+            "Node.js",
+            "Java",
+            "Flask",
+            "Django",
+            "Express",
+            "REST API",
+            "SQL",
+            "MongoDB",
+            "Docker",
+            "Git"
+        ],
+        "roadmap": [
+            "Programming",
+            "DBMS",
+            "Backend Framework",
+            "REST APIs",
+            "Authentication",
+            "Deployment",
+            "Projects",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Backend Developer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Backend+Roadmap"
+            },
+            {
+                "title": "Backend Developer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Backend+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Backend",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Backend"
+            },
+            {
+                "title": "freeCodeCamp Backend",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Backend"
+            },
+            {
+                "title": "Chai aur Code Backend",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Backend"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Backend Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Backend Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Backend Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Backend Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Backend Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Backend Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Backend Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Frontend Developer": {
+        "overview": "Create responsive and interactive web interfaces.",
+        "required_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Bootstrap",
+            "Tailwind CSS",
+            "Redux",
+            "Git"
+        ],
+        "roadmap": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "State Management",
+            "Projects",
+            "Deployment",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Frontend Developer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Frontend+Roadmap"
+            },
+            {
+                "title": "Frontend Developer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Frontend+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Frontend",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Frontend"
+            },
+            {
+                "title": "freeCodeCamp Frontend",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Frontend"
+            },
+            {
+                "title": "Chai aur Code Frontend",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Frontend"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Frontend Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Frontend Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Frontend Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Frontend Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Frontend Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Frontend Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Frontend Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Full Stack Developer": {
+        "overview": "Build complete web applications from frontend to backend.",
+        "required_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "SQL",
+            "Git",
+            "REST APIs"
+        ],
+        "roadmap": [
+            "Frontend",
+            "Backend",
+            "Database",
+            "Authentication",
+            "Projects",
+            "Deployment",
+            "Testing",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Full Stack Developer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Full+Stack+Roadmap"
+            },
+            {
+                "title": "Full Stack Developer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Full+Stack+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Full Stack",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Full+Stack"
+            },
+            {
+                "title": "freeCodeCamp Full Stack",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Full+Stack"
+            },
+            {
+                "title": "Chai aur Code Full Stack",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Full+Stack"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Full Stack Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Full Stack Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Full Stack Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Full Stack Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Full Stack Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Full Stack Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Full Stack Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Software Engineer": {
+        "overview": "Design, build and maintain software systems.",
+        "required_skills": [
+            "C++",
+            "Java",
+            "Python",
+            "DSA",
+            "OOP",
+            "DBMS",
+            "OS",
+            "CN",
+            "Git",
+            "System Design"
+        ],
+        "roadmap": [
+            "Programming",
+            "DSA",
+            "OOP",
+            "DBMS",
+            "OS",
+            "CN",
+            "Projects",
+            "System Design",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Software Engineer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Software+Engineering+Roadmap"
+            },
+            {
+                "title": "Software Engineer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Software+Engineering+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Software Engineering",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Software+Engineering"
+            },
+            {
+                "title": "freeCodeCamp Software Engineering",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Software+Engineering"
+            },
+            {
+                "title": "Chai aur Code Software Engineering",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Software+Engineering"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Software Engineering Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Software Engineering Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Software Engineering Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Software Engineering Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Software Engineering Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Software Engineering Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Software Engineering Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "DevOps Engineer": {
+        "overview": "Automate deployment, monitoring and cloud infrastructure.",
+        "required_skills": [
+            "Linux",
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "CI/CD",
+            "AWS",
+            "Terraform",
+            "Jenkins"
+        ],
+        "roadmap": [
+            "Linux",
+            "Git",
+            "Docker",
+            "CI/CD",
+            "Cloud",
+            "Kubernetes",
+            "Monitoring",
+            "Projects",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "DevOps Engineer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=DevOps+Roadmap"
+            },
+            {
+                "title": "DevOps Engineer Playlist",
+                "url": "https://www.youtube.com/results?search_query=DevOps+Playlist"
+            },
+            {
+                "title": "CodeWithHarry DevOps",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+DevOps"
+            },
+            {
+                "title": "freeCodeCamp DevOps",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+DevOps"
+            },
+            {
+                "title": "Chai aur Code DevOps",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+DevOps"
+            }
+        ],
+        "courses": [
+            {
+                "name": "DevOps Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "DevOps Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "DevOps Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "DevOps Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic DevOps Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "DevOps Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade DevOps Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Cloud Engineer": {
+        "overview": "Design and manage scalable cloud infrastructure.",
+        "required_skills": [
+            "AWS",
+            "Azure",
+            "GCP",
+            "Linux",
+            "Networking",
+            "Docker",
+            "Terraform",
+            "Kubernetes"
+        ],
+        "roadmap": [
+            "Cloud Basics",
+            "Linux",
+            "Networking",
+            "AWS",
+            "Docker",
+            "Terraform",
+            "Projects",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Cloud Engineer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Cloud+Roadmap"
+            },
+            {
+                "title": "Cloud Engineer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Cloud+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Cloud",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Cloud"
+            },
+            {
+                "title": "freeCodeCamp Cloud",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Cloud"
+            },
+            {
+                "title": "Chai aur Code Cloud",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Cloud"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Cloud Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Cloud Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Cloud Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Cloud Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Cloud Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Cloud Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Cloud Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Cybersecurity Analyst": {
+        "overview": "Protect networks, systems and applications from cyber threats.",
+        "required_skills": [
+            "Networking",
+            "Linux",
+            "Python",
+            "Ethical Hacking",
+            "OWASP",
+            "SIEM",
+            "Cryptography",
+            "Wireshark"
+        ],
+        "roadmap": [
+            "Networking",
+            "Linux",
+            "Security",
+            "Ethical Hacking",
+            "Web Security",
+            "Projects",
+            "Certifications",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Cybersecurity Analyst Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Cybersecurity+Roadmap"
+            },
+            {
+                "title": "Cybersecurity Analyst Playlist",
+                "url": "https://www.youtube.com/results?search_query=Cybersecurity+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Cybersecurity",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Cybersecurity"
+            },
+            {
+                "title": "freeCodeCamp Cybersecurity",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Cybersecurity"
+            },
+            {
+                "title": "Chai aur Code Cybersecurity",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Cybersecurity"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Cybersecurity Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Cybersecurity Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Cybersecurity Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Cybersecurity Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Cybersecurity Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Cybersecurity Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Cybersecurity Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
+        }
+    },
+    "Mobile Application Developer": {
+        "overview": "Develop Android and cross-platform mobile applications.",
+        "required_skills": [
+            "Java",
+            "Kotlin",
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "REST APIs",
+            "SQLite",
+            "Git"
+        ],
+        "roadmap": [
+            "Programming",
+            "Android/Flutter",
+            "UI Design",
+            "Firebase",
+            "APIs",
+            "Projects",
+            "Play Store",
+            "Interview"
+        ],
+        "youtube_videos": [
+            {
+                "title": "Mobile App Developer Roadmap",
+                "url": "https://www.youtube.com/results?search_query=Mobile+App+Development+Roadmap"
+            },
+            {
+                "title": "Mobile App Developer Playlist",
+                "url": "https://www.youtube.com/results?search_query=Mobile+App+Development+Playlist"
+            },
+            {
+                "title": "CodeWithHarry Mobile App Development",
+                "url": "https://www.youtube.com/results?search_query=CodeWithHarry+Mobile+App+Development"
+            },
+            {
+                "title": "freeCodeCamp Mobile App Development",
+                "url": "https://www.youtube.com/results?search_query=freeCodeCamp+Mobile+App+Development"
+            },
+            {
+                "title": "Chai aur Code Mobile App Development",
+                "url": "https://www.youtube.com/results?search_query=Chai+aur+Code+Mobile+App+Development"
+            }
+        ],
+        "courses": [
+            {
+                "name": "Mobile App Development Fundamentals",
+                "provider": "Coursera",
+                "level": "Beginner",
+                "url": "https://www.coursera.org"
+            },
+            {
+                "name": "Mobile App Development Learning Path",
+                "provider": "Microsoft Learn",
+                "level": "Intermediate",
+                "url": "https://learn.microsoft.com"
+            },
+            {
+                "name": "Mobile App Development Course",
+                "provider": "freeCodeCamp",
+                "level": "Beginner",
+                "url": "https://www.freecodecamp.org"
+            },
+            {
+                "name": "Mobile App Development Essentials",
+                "provider": "Udemy",
+                "level": "Intermediate",
+                "url": "https://www.udemy.com"
+            }
+        ],
+        "practice_platforms": [
+            {
+                "name": "LeetCode",
+                "url": "https://leetcode.com"
+            },
+            {
+                "name": "HackerRank",
+                "url": "https://www.hackerrank.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com"
+            },
+            {
+                "name": "Kaggle",
+                "url": "https://www.kaggle.com"
+            }
+        ],
+        "project_ideas": [
+            {
+                "level": "Beginner",
+                "title": "Basic Mobile App Development Project"
+            },
+            {
+                "level": "Intermediate",
+                "title": "Mobile App Development Management System"
+            },
+            {
+                "level": "Advanced",
+                "title": "Enterprise-grade Mobile App Development Platform"
+            }
+        ],
+        "companies": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Adobe",
+            "NVIDIA",
+            "IBM",
+            "Oracle",
+            "Infosys",
+            "TCS",
+            "Accenture"
+        ],
+        "salary": {
+            "fresher": "₹4–10 LPA",
+            "experienced": "₹12–30 LPA"
         }
     }
 }
