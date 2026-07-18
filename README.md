@@ -1,14 +1,21 @@
-# 🚀 Engineering Readiness Analyzer
+# 🚀 Engineering Readiness Assessment System
 
-An AI-powered full-stack web application that evaluates an engineering student's readiness for the software industry and recommends suitable career paths using Machine Learning.
+An AI-powered full-stack web application that evaluates an engineering student's readiness for the software industry using Machine Learning and recommends suitable career paths with personalized learning roadmaps.
+
+---
+
+## 🌐 Live Demo
+
+- **Frontend:** https://engineering-readiness-assessment-sy.vercel.app/
+- **Backend:** https://engineering-readiness-assessment-system.onrender.com/
 
 ---
 
 ## 📖 Overview
 
-Engineering Readiness Analyzer helps students understand their current technical readiness based on academic performance, coding experience, projects, internships, hackathons, and self-learning habits.
+Engineering Readiness Assessment System helps students assess their technical preparedness for software engineering roles by analyzing academic performance, coding experience, projects, internships, hackathons, and self-learning habits.
 
-The application predicts an **Engineering Readiness Score** using a Machine Learning model and recommends the most suitable engineering roles along with personalized learning resources.
+The application predicts an **Engineering Readiness Score (0–100)** using a Machine Learning model and recommends the most suitable engineering roles along with detailed career roadmaps, learning resources, and improvement suggestions.
 
 ---
 
@@ -16,46 +23,37 @@ The application predicts an **Engineering Readiness Score** using a Machine Lear
 
 - 🤖 Machine Learning based Engineering Readiness Prediction
 - 📊 Engineering Readiness Score (0–100)
-- 🎯 Personalized Career Role Recommendations
-- 📚 Role-specific Learning Roadmaps
+- 🎯 Personalized Engineering Role Recommendations
+- 📚 Detailed Role Information
+- 🛣️ Career Roadmaps
 - 🎥 Curated YouTube Learning Resources
 - 📖 Recommended Courses
-- 💻 Practice Platforms
+- 💻 Coding Practice Platforms
 - 💡 Project Suggestions
 - 🏢 Top Hiring Companies
 - 💰 Salary Insights
-- 📱 Responsive Modern UI
-- ⚡ Smooth Animations using Framer Motion
+- 📱 Responsive User Interface
+- ⚡ Smooth Animations with Framer Motion
 
 ---
 
 ## 🖼️ Screenshots
 
-> Add screenshots inside a `screenshots/` folder.
-
 ### Home Page
 
-```
-screenshots/home.png
-```
+![Home Page](screenshots/home.png)
 
 ### Assessment Form
 
-```
-screenshots/form.png
-```
+![Assessment Form](screenshots/form.png)
 
 ### Prediction Result
 
-```
-screenshots/result.png
-```
+![Prediction Result](screenshots/result.png)
 
-### Career Details
+### Role Details
 
-```
-screenshots/details.png
-```
+![Role Details](screenshots/details.png)
 
 ---
 
@@ -63,16 +61,18 @@ screenshots/details.png
 
 ### Frontend
 
-- React.js
+- React
+- Vite
 - CSS3
+- Axios
 - Framer Motion
 - React Icons
-- Axios
 
 ### Backend
 
 - Flask
 - Flask-CORS
+- Gunicorn
 
 ### Machine Learning
 
@@ -80,69 +80,76 @@ screenshots/details.png
 - Scikit-learn
 - Pandas
 - NumPy
+- Joblib
+
+### Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
 
 ### Development Tools
 
-- VS Code
 - Git
 - GitHub
+- VS Code
 
 ---
 
 ## 📂 Project Structure
 
-```
-Engineering-Readiness-Analyzer/
+```text
+Engineering-Readiness-Assessment-System/
 │
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   └── package.json
+│   ├── package.json
+│   └── .env
 │
 ├── backend/
 │   ├── app.py
-│   ├── model.pkl
+│   ├── predict.py
 │   ├── role_data.json
 │   ├── requirements.txt
-│   └── dataset.csv
+│   ├── model/
+│   │   └── engineering_score_model.pkl
+│   └── dataset/
 │
 ├── screenshots/
 │
-├── README.md
-│
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-## ⚙️ Machine Learning Model
+## ⚙️ Machine Learning
 
-The application compares multiple regression models for predicting the Engineering Readiness Score.
+The application compares multiple regression models to predict Engineering Readiness Score.
 
-Models evaluated:
+### Models Evaluated
 
 - Linear Regression
-- Decision Tree Regression
-- Random Forest Regression ✅
-- XGBoost Regression
+- Decision Tree Regressor
+- Random Forest Regressor ✅
+- XGBoost Regressor
 
 ### Final Model
 
-Random Forest Regression
+**Random Forest Regressor**
 
-### Evaluation Metrics
+### Performance
 
-| Metric | Value |
-|---------|--------|
+| Metric | Score |
+|---------|------:|
 | R² Score | 0.593 |
 | RMSE | 9.45 |
 | MAE | 7.07 |
 
 ---
 
-## 📊 Input Parameters
+## 📊 Prediction Features
 
-The prediction model uses the following features:
+The Machine Learning model uses the following inputs:
 
 - CGPA
 - Backlog History
@@ -156,14 +163,14 @@ The prediction model uses the following features:
 
 ---
 
-## 🎯 Career Roles Supported
+## 🎯 Supported Career Roles
 
+- Software Engineer
+- Backend Developer
+- Full Stack Developer
 - Machine Learning Engineer
 - AI Engineer
 - Data Scientist
-- Backend Developer
-- Full Stack Developer
-- Software Engineer
 - Cloud Engineer
 - DevOps Engineer
 - Cybersecurity Analyst
@@ -173,33 +180,34 @@ The prediction model uses the following features:
 
 ## 🚀 Installation
 
-### Clone Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/engineering-readiness-analyzer.git
+git clone https://github.com/Srd-Saqhib/engineering-readiness-assessment-system.git
+cd engineering-readiness-assessment-system
 ```
-
----
 
 ### Frontend
 
-```bash
-cd frontend
+Create a `.env` file inside the `frontend` folder:
 
-npm install
-
-npm run dev
+```env
+VITE_API_URL=http://127.0.0.1:5000
 ```
 
----
+Run the frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ### Backend
 
 ```bash
 cd backend
-
 pip install -r requirements.txt
-
 python app.py
 ```
 
@@ -207,80 +215,87 @@ python app.py
 
 ## 🌐 API Endpoints
 
-### Predict Readiness
+### Predict Engineering Readiness
 
-```
+```http
 POST /predict
 ```
 
-Returns
+Returns:
 
-- Engineering Score
+- Engineering Readiness Score
 - Readiness Level
 - Recommended Roles
-- Improvement Suggestions
+- Personalized Suggestions
 
 ---
 
-### Role Details
+### Get Role Details
 
-```
+```http
 GET /role/<role_name>
 ```
 
-Returns
+Returns:
 
-- Overview
-- Skills
-- Roadmap
-- Videos
-- Courses
-- Practice Platforms
+- Role Overview
+- Required Skills
+- Learning Roadmap
+- YouTube Resources
+- Recommended Courses
+- Coding Platforms
 - Project Ideas
-- Companies
-- Salary Information
+- Top Hiring Companies
+- Salary Insights
 
 ---
 
-## 📈 Workflow
+## 📈 Application Workflow
 
-```
+```text
 Student Input
       │
       ▼
 Data Validation
       │
       ▼
-Machine Learning Model
-(Random Forest Regression)
+Random Forest Regression Model
       │
       ▼
 Engineering Readiness Score
       │
       ▼
-Career Recommendation Engine
+Role Recommendation Engine
       │
       ▼
-Role Details
-      │
-      ▼
-Learning Roadmap
+Detailed Career Guidance
 ```
 
 ---
 
-## 📌 Future Enhancements
+## 🚀 Deployment
+
+The application is deployed using:
+
+- **Frontend:** Vercel
+- **Backend:** Render
+
+The frontend communicates with the backend using the `VITE_API_URL` environment variable, allowing different API endpoints for local development and production.
+
+---
+
+## 🔮 Future Enhancements
 
 - User Authentication
 - Student Dashboard
-- Profile History
+- Assessment History
 - Resume Analysis
-- AI Chat Assistant
+- AI Career Assistant
 - Interview Question Generator
 - Skill Gap Analysis
 - Course Progress Tracking
-- Company-wise Placement Prediction
-- Cloud Deployment
+- Placement Prediction
+- Resume PDF Export
 
 ---
 
@@ -290,14 +305,16 @@ Learning Roadmap
 
 Computer Science Engineering Student
 
+GitHub: https://github.com/Srd-Saqhib
+
 ---
 
 ## 📜 License
 
-This project is developed for educational and learning purposes.
+This project is intended for educational and learning purposes.
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+If you found this project helpful, consider giving it a ⭐ on GitHub.
